@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="w4IPad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W4 IPad App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2m-IG-jle">
+                                <rect key="frame" x="20" y="55" width="728" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVY-Nc-Ggo">
+                                <rect key="frame" x="162" y="459" width="418" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name Here" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="3JS-li-muE">
+                                <rect key="frame" x="20" y="140" width="728" height="62"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done" textContentType="name"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="mNh-bv-JsS"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email Here" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="wUr-md-hmS">
+                                <rect key="frame" x="20" y="232" width="728" height="62"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" textContentType="email"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="217-kk-57v"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYX-15-SCl">
+                                <rect key="frame" x="100" y="344" width="568" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveDataWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JvE-GA-tXS"/>
+                                </connections>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lgs-Bc-RwZ">
+                                <rect key="frame" x="0.0" y="611" width="761" height="407"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="AVo-oC-7tX">
+                                <rect key="frame" x="366" y="786" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkj-SH-1ka">
+                                <rect key="frame" x="175" y="535" width="418" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Q2m-IG-jle" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="04b-zO-SmT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oYX-15-SCl" secondAttribute="trailing" constant="100" id="67I-yJ-tzn"/>
+                            <constraint firstItem="oYX-15-SCl" firstAttribute="top" secondItem="wUr-md-hmS" secondAttribute="bottom" constant="50" id="C41-uC-YTm"/>
+                            <constraint firstItem="wUr-md-hmS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ct1-Sv-O8V"/>
+                            <constraint firstItem="3JS-li-muE" firstAttribute="top" secondItem="Q2m-IG-jle" secondAttribute="bottom" constant="50" id="XWp-xW-sGy"/>
+                            <constraint firstItem="3JS-li-muE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZmM-Zw-Wgy"/>
+                            <constraint firstItem="Q2m-IG-jle" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="ail-jD-vrF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3JS-li-muE" secondAttribute="trailing" constant="20" id="ha7-Q2-D0q"/>
+                            <constraint firstItem="oYX-15-SCl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="jNb-X8-3o0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wUr-md-hmS" secondAttribute="trailing" constant="20" id="oBc-lY-5Tf"/>
+                            <constraint firstItem="wUr-md-hmS" firstAttribute="top" secondItem="3JS-li-muE" secondAttribute="bottom" constant="30" id="sQP-Qa-QOM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q2m-IG-jle" secondAttribute="trailing" constant="20" id="szU-Em-pvh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activity" destination="AVo-oC-7tX" id="kMG-XM-Xmc"/>
+                        <outlet property="lbEmail" destination="Jkj-SH-1ka" id="rs7-E5-Cf6"/>
+                        <outlet property="lbName" destination="PVY-Nc-Ggo" id="MoW-gS-e9W"/>
+                        <outlet property="tfEmail" destination="wUr-md-hmS" id="aB5-VT-I7U"/>
+                        <outlet property="tfName" destination="3JS-li-muE" id="Eps-XA-EUb"/>
+                        <outlet property="wbPage" destination="Lgs-Bc-RwZ" id="MMh-Ig-OJO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52" y="-47"/>
+        </scene>
+    </scenes>
+</document>
